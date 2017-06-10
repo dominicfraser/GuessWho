@@ -1,3 +1,12 @@
+body {
+  margin: 0;
+}
+
+.header {
+  font-family: 'Bungee', cursive;
+  text-align: center;
+}
+
 .character-tile {
   width: 100%;
   height: 100%;
@@ -10,5 +19,6 @@
   grid-template-rows: 21vw 21vw 21vw;
   grid-gap: 5px;
   background-color: #fff;
+  margin: 0 2vw;
 }
 

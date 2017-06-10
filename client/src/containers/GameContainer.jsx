@@ -13,16 +13,18 @@ class GameContainer extends React.Component {
     super(props)
 
     this.randomIndex = 0
+    this.seedCharacters = CharacterSeeds()
+    this.seedQuestions = QuestionsSeeds()
 
     this.state = {
-      correctChar: CharacterSeeds()[this.randomIndex],
-      possibleChars: CharacterSeeds(),
+      correctChar: this.seedCharacters[this.randomIndex],
+      possibleChars: this.seedCharacters,
       disguardedChars: [],
-      selectedChar: CharacterSeeds()[0],
-      possibleQuestions: QuestionsSeeds(),
-      selectedQuestion: QuestionsSeeds()[0],
+      selectedChar: this.seedCharacters[0],
+      possibleQuestions: this.seedQuestions,
+      selectedQuestion: this.seedQuestions[0],
       numberQsAsked: 0,
-      match: false
+      match: "not yet guessed"
     }
 
 
@@ -37,7 +39,7 @@ class GameContainer extends React.Component {
   render(){
 console.log('render')
 console.log('disguardedChars', this.state.disguardedChars)
-    const tiles = this.state.possibleChars.map((char, index) => {
+    const tiles = this.seedCharacters.map((char, index) => {
       const srcPath = `./public/images/${char.name}.png`
       let opacity = 1
       if(this.state.disguardedChars.find(c => c.name === char.name) !== undefined){
@@ -50,8 +52,11 @@ console.log('disguardedChars', this.state.disguardedChars)
     })
 
     let result = <p>No result yet</p>
-    if (this.state.match){
-      result = <ResultDisplayer turns={this.state.numberQsAsked}/>
+    if (this.state.match === "won"){
+      result = <ResultDisplayer message="Correct! You Win!" turns={this.state.numberQsAsked}/>
+    } 
+    else if(this.state.match === "incorrect guess") {
+      result = <ResultDisplayer message="Incorrect! You Loose!" turns={this.state.numberQsAsked}/>
     }
 
     return (
@@ -88,6 +93,7 @@ console.log('disguardedChars', this.state.disguardedChars)
     const reducedQuestions = this.state.possibleQuestions.slice()
     reducedQuestions.splice(questionIndex, 1)
     this.setState({possibleQuestions: reducedQuestions})
+    this.setState({selectedQuestion: reducedQuestions[0]})
     this.setState({numberQsAsked: (this.state.numberQsAsked+1)})
 
     this.checkCharsAgainstQuestion()
@@ -96,10 +102,14 @@ console.log('disguardedChars', this.state.disguardedChars)
   checkCharsAgainstQuestion(){
     const checkParam = this.state.selectedQuestion.checkParam
     const valueToMatch = this.state.selectedQuestion.valueToMatch
-    const newdisguardedChars = this.state.possibleChars.filter(c => c[checkParam] !== valueToMatch)
-
-    const disguardedChars = [...newdisguardedChars, ...this.state.disguardedChars]
+    
+    const newDisguardedChars = this.state.possibleChars.filter(c => c[checkParam] !== valueToMatch)
+    const disguardedChars = [...newDisguardedChars, ...this.state.disguardedChars]
     this.setState({disguardedChars: disguardedChars})
+
+    const newPossibleChars = this.state.possibleChars.filter(c => c[checkParam] === valueToMatch)
+    this.setState({possibleChars: newPossibleChars})
+    this.setState({selectedChar: newPossibleChars[0]})
   }
 
   handleCharacterChange(event){
@@ -110,7 +120,9 @@ console.log('disguardedChars', this.state.disguardedChars)
 
   onSubmitCharacterClick(e){
     if(this.state.selectedChar.name === this.state.correctChar.name){
-      this.setState({match: true})
+      this.setState({match: "won"})
+    } else {
+      this.setState({match: "incorrect guess"})
     }
   }
 

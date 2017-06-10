@@ -3,13 +3,14 @@ import Header from '../components/Header'
 import CharacterTile from '../components/CharacterTile'
 import QuestionPicker from '../components/QuestionPicker'
 import CharacterSeeds from '../models/CharacterSeeds'
+import QuestionsSeeds from '../models/QuestionsSeeds'
 
 class GameContainer extends React.Component {
   constructor(props){
     super(props)
     this.state = {
       possibleChars: CharacterSeeds(),
-      possibleQuestions: ['Do they have green skin', 'two'],
+      possibleQuestions: QuestionsSeeds(),
       selectedQuestion: [],
       numberQsAsked: 0
     }

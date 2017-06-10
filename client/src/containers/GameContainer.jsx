@@ -1,5 +1,6 @@
 import React from 'react'
 import Header from '../components/Header'
+import CharacterTile from '../components/CharacterTile'
 
 class GameContainer extends React.Component {
   constructor(props){
@@ -11,6 +12,7 @@ class GameContainer extends React.Component {
     return (
         <div className='game-container'>
           <Header heading="Guess Who" />
+          <CharacterTile src='./public/images/batman.png' />
         </div>
       )
   }

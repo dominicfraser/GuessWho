@@ -21,6 +21,12 @@ const QuestionsSeeds = function(){
     }),
 
     new Question({
+      title: "Are they from earth",
+      checkParam: "planet",
+      valueToMatch: "earth"
+    }),
+
+    new Question({
       title: "Can they fly",
       checkParam: "flight",
       valueToMatch: "yes"

@@ -2,19 +2,19 @@ import React from 'react'
 
 const QuestionPicker = function(props){
 
-  const options = props.questions.map((question, index) => {
+  const options = props.possibleQuestions.map((question, index) => {
     return (
       <option key={index} value={question}>{question}?</option>
       )
   })
 
   return (
-      <form id='question-picker-form'>
-        <select>
+      <section id='question-picker-section'>
+        <select onChange={props.onSelectedQuestionChange}>
           {options}
         </select>
-        <input type='submit' value='Ask' />
-      </form>
+        <button onClick={props.onAskQuestionClick}>Ask</button>
+      </section>
     )
 
 }

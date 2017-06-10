@@ -3,7 +3,8 @@ import Character from './Character.js'
 const CharacterSeeds = function(){
   const Characters = [
     new Character({
-      name: 'antman',
+      name: 'Antman',
+      linkName: 'antman',
       sex: 'male',
       skinColour: 'white',
       flight: "no",
@@ -11,7 +12,8 @@ const CharacterSeeds = function(){
     }),
 
     new Character({
-      name: 'batman',
+      name: 'Batman',
+      linkName: 'batman',
       sex: 'male',
       skinColour: 'white',
       flight: "no",
@@ -19,7 +21,8 @@ const CharacterSeeds = function(){
     }),
 
     new Character({
-      name: 'blackcanary',
+      name: 'Black Canary',
+      linkName: 'blackcanary',
       sex: 'female',
       skinColour: 'white',
       flight: "no",
@@ -27,7 +30,8 @@ const CharacterSeeds = function(){
     }),
 
     new Character({
-      name: 'blackwidow',
+      name: 'Black Widow',
+      linkName: 'blackwidow',
       sex: 'female',
       skinColour: 'white',
       flight: "no",
@@ -35,7 +39,8 @@ const CharacterSeeds = function(){
     }),
 
     new Character({
-      name: 'captainamerica',
+      name: 'Captain America',
+      linkName: 'captainamerica',
       sex: 'male',
       skinColour: 'white',
       flight: "no",
@@ -43,7 +48,8 @@ const CharacterSeeds = function(){
     }),
 
     new Character({
-      name: 'catwoman',
+      name: 'Catwoman',
+      linkName: 'catwoman',
       sex: 'female',
       skinColour: 'white',
       flight: "no",
@@ -51,7 +57,8 @@ const CharacterSeeds = function(){
     }),
 
     new Character({
-      name: 'cyclops',
+      name: 'Cyclops',
+      linkName: 'cyclops',
       sex: 'male',
       skinColour: 'white',
       flight: "no",
@@ -59,7 +66,8 @@ const CharacterSeeds = function(){
     }),
 
     new Character({
-      name: 'flash',
+      name: 'Flash',
+      linkName: 'flash',
       sex: 'male',
       skinColour: 'white',
       flight: "no",
@@ -67,7 +75,8 @@ const CharacterSeeds = function(){
     }),
 
     new Character({
-      name: 'greenarrow',
+      name: 'Green Arrow',
+      linkName: 'greenarrow',
       sex: 'male',
       skinColour: 'white',
       flight: "no",
@@ -75,7 +84,8 @@ const CharacterSeeds = function(){
     }),
 
     new Character({
-      name: 'hawkgirl',
+      name: 'Hawkgirl',
+      linkName: 'hawkgirl',
       sex: 'female',
       skinColour: 'white',
       flight: "yes",
@@ -83,7 +93,8 @@ const CharacterSeeds = function(){
     }),
 
     new Character({
-      name: 'hulk',
+      name: 'The Hulk',
+      linkName: 'hulk',
       sex: 'male',
       skinColour: 'green',
       flight: "no",
@@ -91,7 +102,8 @@ const CharacterSeeds = function(){
     }),
 
     new Character({
-      name: 'ironman',
+      name: 'Iron Man',
+      linkName: 'ironman',
       sex: 'male',
       skinColour: 'white',
       flight: "yes",
@@ -99,7 +111,8 @@ const CharacterSeeds = function(){
     }),
 
     new Character({
-      name: 'spiderman',
+      name: 'Spiderman',
+      linkName: 'spiderman',
       sex: 'male',
       skinColour: 'white',
       flight: "no",
@@ -107,7 +120,8 @@ const CharacterSeeds = function(){
     }),
 
     new Character({
-      name: 'starlord',
+      name: 'Star Lord',
+      linkName: 'starlord',
       sex: 'male',
       skinColour: 'white',
       flight: "no",
@@ -115,7 +129,8 @@ const CharacterSeeds = function(){
     }),
 
     new Character({
-      name: 'superman',
+      name: 'Superman',
+      linkName: 'superman',
       sex: 'male',
       skinColour: 'white',
       flight: "yes",
@@ -123,7 +138,8 @@ const CharacterSeeds = function(){
     }),
 
     new Character({
-      name: 'thor',
+      name: 'Thor',
+      linkName: 'thor',
       sex: 'male',
       skinColour: 'white',
       flight: "no",
@@ -131,7 +147,8 @@ const CharacterSeeds = function(){
     }),
 
     new Character({
-      name: 'wolverine',
+      name: 'Wolverine',
+      linkName: 'wolverine',
       sex: 'male',
       skinColour: 'white',
       flight: "no",
@@ -139,7 +156,8 @@ const CharacterSeeds = function(){
     }),
 
     new Character({
-      name: 'wonderwoman',
+      name: 'Wonder Woman',
+      linkName: 'wonderwoman',
       sex: 'female',
       skinColour: 'white',
       flight: "no",

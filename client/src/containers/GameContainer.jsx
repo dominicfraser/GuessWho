@@ -40,7 +40,7 @@ class GameContainer extends React.Component {
 console.log('render')
 console.log('disguardedChars', this.state.disguardedChars)
     const tiles = this.seedCharacters.map((char, index) => {
-      const srcPath = `./public/images/${char.name}.png`
+      const srcPath = `./public/images/${char.linkName}.png`
       let opacity = 1
       if(this.state.disguardedChars.find(c => c.name === char.name) !== undefined){
         opacity = 0.3

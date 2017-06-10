@@ -12,7 +12,7 @@ class GameContainer extends React.Component {
     super(props)
     this.state = {
       possibleChars: CharacterSeeds(),
-      chosenChars: [CharacterSeeds()[1]],
+      disguardedChars: [],
       possibleQuestions: QuestionsSeeds(),
       selectedQuestion: QuestionsSeeds()[0],
       numberQsAsked: 0,
@@ -25,12 +25,12 @@ class GameContainer extends React.Component {
   }
 
   render(){
-
+console.log('render')
+console.log('disguardedChars', this.state.disguardedChars)
     const tiles = this.state.possibleChars.map((char, index) => {
       const srcPath = `./public/images/${char.name}.png`
-
       let opacity = 1
-      if(this.state.chosenChars.find(c => c.name === char.name) !== undefined){
+      if(this.state.disguardedChars.find(c => c.name === char.name) !== undefined){
         opacity = 0.3
       }
 
@@ -75,8 +75,16 @@ class GameContainer extends React.Component {
     this.setState({numberQsAsked: (this.state.numberQsAsked+1)})
 
     // this.setState({match: true})
+    this.checkCharsAgainstQuestion()
+  }
 
+  checkCharsAgainstQuestion(){
+    const checkParam = this.state.selectedQuestion.checkParam
+    const valueToMatch = this.state.selectedQuestion.valueToMatch
+    const newdisguardedChars = this.state.possibleChars.filter(c => c[checkParam] === valueToMatch)
 
+    const disguardedChars = [...newdisguardedChars, ...this.state.disguardedChars]
+    this.setState({disguardedChars: disguardedChars})
   }
 
 }

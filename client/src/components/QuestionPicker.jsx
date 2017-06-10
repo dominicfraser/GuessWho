@@ -3,7 +3,6 @@ import React from 'react'
 const QuestionPicker = function(props){
 
   const options = props.possibleQuestions.map((question, index) => {
-      // console.log(question)
 
     return (
       <option key={index} value={question.title}>{question.title}?</option>

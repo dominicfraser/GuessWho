@@ -3,9 +3,9 @@ import Question from './Question.js'
 const QuestionsSeeds = function(){
   const Questions =[
     new Question({
-      title: "one",
-      checkParam: "one",
-      valueToMatch: "one"
+      title: "Are they male",
+      checkParam: "sex",
+      valueToMatch: "male"
     }),
 
     new Question({
@@ -15,9 +15,15 @@ const QuestionsSeeds = function(){
     }),
 
     new Question({
-      title: "blank",
-      checkParam: "blank",
-      valueToMatch: "blank"
+      title: "Are they female",
+      checkParam: "sex",
+      valueToMatch: "female"
+    }),
+
+    new Question({
+      title: "Can they fly",
+      checkParam: "flight",
+      valueToMatch: "yes"
     })
 
   ]

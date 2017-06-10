@@ -4,92 +4,128 @@ const CharacterSeeds = function(){
   const Characters = [
     new Character({
       name: 'antman',
-      skinColour: 'white'
+      sex: 'male',
+      skinColour: 'white',
+      flight: "no"
     }),
 
     new Character({
       name: 'batman',
-      skinColour: 'white'
+      sex: 'male',
+      skinColour: 'white',
+      flight: "no"
     }),
 
     new Character({
       name: 'blackcanary',
-      skinColour: 'white'
+      sex: 'female',
+      skinColour: 'white',
+      flight: "no"
     }),
 
     new Character({
       name: 'blackwidow',
-      skinColour: 'white'
+      sex: 'female',
+      skinColour: 'white',
+      flight: "no"
     }),
 
     new Character({
       name: 'captainamerica',
-      skinColour: 'white'
+      sex: 'male',
+      skinColour: 'white',
+      flight: "no"
     }),
 
     new Character({
       name: 'catwoman',
-      skinColour: 'white'
+      sex: 'female',
+      skinColour: 'white',
+      flight: "no"
     }),
 
     new Character({
       name: 'cyclops',
-      skinColour: 'white'
+      sex: 'male',
+      skinColour: 'white',
+      flight: "no"
     }),
 
     new Character({
       name: 'flash',
-      skinColour: 'white'
+      sex: 'male',
+      skinColour: 'white',
+      flight: "no"
     }),
 
     new Character({
       name: 'greenarrow',
-      skinColour: 'white'
+      sex: 'male',
+      skinColour: 'white',
+      flight: "no"
     }),
 
     new Character({
       name: 'hawkgirl',
-      skinColour: 'white'
+      sex: 'female',
+      skinColour: 'white',
+      flight: "yes"
     }),
 
     new Character({
       name: 'hulk',
-      skinColour: 'green'
+      sex: 'male',
+      skinColour: 'green',
+      flight: "no"
     }),
 
     new Character({
       name: 'ironman',
-      skinColour: 'white'
+      sex: 'male',
+      skinColour: 'white',
+      flight: "yes"
     }),
 
     new Character({
       name: 'spiderman',
-      skinColour: 'white'
+      sex: 'male',
+      skinColour: 'white',
+      flight: "no"
     }),
 
     new Character({
       name: 'starlord',
-      skinColour: 'white'
+      sex: 'male',
+      skinColour: 'white',
+      flight: "no"
     }),
 
     new Character({
       name: 'superman',
-      skinColour: 'white'
+      sex: 'male',
+      skinColour: 'white',
+      flight: "yes"
     }),
 
     new Character({
       name: 'thor',
-      skinColour: 'white'
+      sex: 'male',
+      skinColour: 'white',
+      flight: "no"
     }),
 
     new Character({
       name: 'wolverine',
-      skinColour: 'white'
+      sex: 'male',
+      skinColour: 'white',
+      flight: "no"
     }),
 
     new Character({
       name: 'wonderwoman',
-      skinColour: 'white'
+      sex: 'female',
+      skinColour: 'white',
+      flight: "no"
     })
   ]
 

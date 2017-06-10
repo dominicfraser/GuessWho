@@ -2,6 +2,7 @@ import React from 'react'
 import Header from '../components/Header'
 import CharacterTile from '../components/CharacterTile'
 import QuestionPicker from '../components/QuestionPicker'
+import CharacterPicker from '../components/CharacterPicker'
 import ResultDisplayer from '../components/ResultDisplayer'
 import CharacterSeeds from '../models/CharacterSeeds'
 import QuestionsSeeds from '../models/QuestionsSeeds'
@@ -13,6 +14,7 @@ class GameContainer extends React.Component {
     this.state = {
       possibleChars: CharacterSeeds(),
       disguardedChars: [],
+      selectedChar: CharacterSeeds()[0],
       possibleQuestions: QuestionsSeeds(),
       selectedQuestion: QuestionsSeeds()[0],
       numberQsAsked: 0,
@@ -20,6 +22,7 @@ class GameContainer extends React.Component {
     }
 
 
+    this.handleCharacterChange = this.handleCharacterChange.bind(this)
     this.handleQuestionChange = this.handleQuestionChange.bind(this)
     this.onAskQuestionClick = this.onAskQuestionClick.bind(this)
   }
@@ -56,7 +59,13 @@ console.log('disguardedChars', this.state.disguardedChars)
           <QuestionPicker 
             onSelectedQuestionChange={this.handleQuestionChange} 
             onAskQuestionClick={this.onAskQuestionClick}
-            possibleQuestions={this.state.possibleQuestions}/>
+            possibleQuestions={this.state.possibleQuestions}
+          />
+          <CharacterPicker
+            onSelectedCharacterChange={this.handleCharacterChange}
+            onSubmitCharacterClick={this.onSubmitCharacterClick}
+            possibleChars={this.state.possibleChars}
+          />
         </div>
       )
   }
@@ -65,6 +74,12 @@ console.log('disguardedChars', this.state.disguardedChars)
     const questionTitle = event.target.value
     const question = this.state.possibleQuestions.find(q => q.title === questionTitle)
     this.setState({selectedQuestion: question})
+  }
+
+  handleCharacterChange(event){
+    const charName = event.target.value
+    const char = this.state.possibleChars.find(c => c.name === charName)
+    this.setState({selectedChar: char})
   }
 
   onAskQuestionClick(e){
@@ -81,7 +96,7 @@ console.log('disguardedChars', this.state.disguardedChars)
   checkCharsAgainstQuestion(){
     const checkParam = this.state.selectedQuestion.checkParam
     const valueToMatch = this.state.selectedQuestion.valueToMatch
-    const newdisguardedChars = this.state.possibleChars.filter(c => c[checkParam] === valueToMatch)
+    const newdisguardedChars = this.state.possibleChars.filter(c => c[checkParam] !== valueToMatch)
 
     const disguardedChars = [...newdisguardedChars, ...this.state.disguardedChars]
     this.setState({disguardedChars: disguardedChars})

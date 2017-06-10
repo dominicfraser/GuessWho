@@ -11,7 +11,11 @@ import Question from '../models/Question'
 class GameContainer extends React.Component {
   constructor(props){
     super(props)
+
+    this.randomIndex = 0
+
     this.state = {
+      correctChar: CharacterSeeds()[this.randomIndex],
       possibleChars: CharacterSeeds(),
       disguardedChars: [],
       selectedChar: CharacterSeeds()[0],
@@ -23,8 +27,11 @@ class GameContainer extends React.Component {
 
 
     this.handleCharacterChange = this.handleCharacterChange.bind(this)
+    this.onSubmitCharacterClick = this.onSubmitCharacterClick.bind(this)
+
     this.handleQuestionChange = this.handleQuestionChange.bind(this)
     this.onAskQuestionClick = this.onAskQuestionClick.bind(this)
+    
   }
 
   render(){
@@ -76,12 +83,6 @@ console.log('disguardedChars', this.state.disguardedChars)
     this.setState({selectedQuestion: question})
   }
 
-  handleCharacterChange(event){
-    const charName = event.target.value
-    const char = this.state.possibleChars.find(c => c.name === charName)
-    this.setState({selectedChar: char})
-  }
-
   onAskQuestionClick(e){
     const questionIndex = this.state.possibleQuestions.findIndex( q => q.title === this.state.selectedQuestion.title)
     const reducedQuestions = this.state.possibleQuestions.slice()
@@ -89,7 +90,6 @@ console.log('disguardedChars', this.state.disguardedChars)
     this.setState({possibleQuestions: reducedQuestions})
     this.setState({numberQsAsked: (this.state.numberQsAsked+1)})
 
-    // this.setState({match: true})
     this.checkCharsAgainstQuestion()
   }
 
@@ -101,6 +101,19 @@ console.log('disguardedChars', this.state.disguardedChars)
     const disguardedChars = [...newdisguardedChars, ...this.state.disguardedChars]
     this.setState({disguardedChars: disguardedChars})
   }
+
+  handleCharacterChange(event){
+    const charName = event.target.value
+    const char = this.state.possibleChars.find(c => c.name === charName)
+    this.setState({selectedChar: char})
+  }
+
+  onSubmitCharacterClick(e){
+    if(this.state.selectedChar.name === this.state.correctChar.name){
+      this.setState({match: true})
+    }
+  }
+
 
 }
 

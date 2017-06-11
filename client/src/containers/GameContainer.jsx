@@ -12,9 +12,10 @@ class GameContainer extends React.Component {
   constructor(props){
     super(props)
 
-    this.randomIndex = 3
+    this.randomIndex = this.randomIntBetween(0,CharacterSeeds().length)
     this.seedCharacters = CharacterSeeds()
     this.seedQuestions = QuestionsSeeds()
+
 
     this.state = {
       correctChar: this.seedCharacters[this.randomIndex],
@@ -139,6 +140,10 @@ console.log('disguardedChars', this.state.disguardedChars)
     } else {
       this.setState({match: "incorrect guess"})
     }
+  }
+
+  randomIntBetween(min,max){
+    return Math.floor(Math.random()*(max-min+1)+min);
   }
 
 

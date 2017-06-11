@@ -31,6 +31,8 @@ class GameContainer extends React.Component {
 
     this.handleQuestionChange = this.handleQuestionChange.bind(this)
     this.onAskQuestionClick = this.onAskQuestionClick.bind(this)
+
+    this.onPlayAgainClick = this.onPlayAgainClick.bind(this)
   }
 
   render(){
@@ -142,6 +144,22 @@ console.log('render')
     } else {
       this.setState({guess: "incorrect guess"})
     }
+  }
+
+  onPlayAgainClick(e){
+    const randomIndex = this.randomIntBetween(0,CharacterSeeds().length)
+
+    this.setState({
+      correctChar: this.seedCharacters[randomIndex],
+      possibleChars: this.seedCharacters,
+      disguardedChars: [],
+      selectedChar: this.seedCharacters[0],
+      possibleQuestions: this.seedQuestions,
+      selectedQuestion: this.seedQuestions[0],
+      numberQsAsked: 0,
+      guess: "not yet guessed"
+    })
+
   }
 
   randomIntBetween(min,max){

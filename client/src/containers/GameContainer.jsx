@@ -25,7 +25,7 @@ class GameContainer extends React.Component {
       possibleQuestions: this.seedQuestions,
       selectedQuestion: this.seedQuestions[0],
       numberQsAsked: 0,
-      match: "not yet guessed"
+      guess: "not yet guessed"
     }
 
 
@@ -53,10 +53,10 @@ console.log('disguardedChars', this.state.disguardedChars)
     })
 
     let result = <p>No result yet</p>
-    if (this.state.match === "won"){
+    if (this.state.guess === "won"){
       result = <ResultDisplayer message="Correct! You Win!" turns={this.state.numberQsAsked}/>
     } 
-    else if(this.state.match === "incorrect guess") {
+    else if(this.state.guess === "incorrect guess") {
       result = <ResultDisplayer message="Incorrect! You Loose!" turns={this.state.numberQsAsked}/>
     }
 
@@ -136,9 +136,9 @@ console.log('disguardedChars', this.state.disguardedChars)
 
   onSubmitCharacterClick(e){
     if(this.state.selectedChar.name === this.state.correctChar.name){
-      this.setState({match: "won"})
+      this.setState({guess: "won"})
     } else {
-      this.setState({match: "incorrect guess"})
+      this.setState({guess: "incorrect guess"})
     }
   }
 

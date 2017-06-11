@@ -4,6 +4,7 @@ import CharacterTile from '../components/CharacterTile'
 import QuestionPicker from '../components/QuestionPicker'
 import CharacterPicker from '../components/CharacterPicker'
 import ResultDisplayer from '../components/ResultDisplayer'
+import PlayAgainButton from '../components/PlayAgainButton'
 import CharacterSeeds from '../models/CharacterSeeds'
 import QuestionsSeeds from '../models/QuestionsSeeds'
 import Question from '../models/Question'
@@ -11,12 +12,9 @@ import Question from '../models/Question'
 class GameContainer extends React.Component {
   constructor(props){
     super(props)
-
     this.randomIndex = this.randomIntBetween(0,CharacterSeeds().length)
     this.seedCharacters = CharacterSeeds()
     this.seedQuestions = QuestionsSeeds()
-
-
     this.state = {
       correctChar: this.seedCharacters[this.randomIndex],
       possibleChars: this.seedCharacters,
@@ -28,13 +26,11 @@ class GameContainer extends React.Component {
       guess: "not yet guessed"
     }
 
-
     this.handleCharacterChange = this.handleCharacterChange.bind(this)
     this.onSubmitCharacterClick = this.onSubmitCharacterClick.bind(this)
 
     this.handleQuestionChange = this.handleQuestionChange.bind(this)
     this.onAskQuestionClick = this.onAskQuestionClick.bind(this)
-    
   }
 
   render(){
@@ -82,6 +78,10 @@ console.log('render')
               guess={this.state.guess}
             />
           </div>
+          <PlayAgainButton id='play-again-button'
+            onPlayAgainClick={this.onPlayAgainClick}
+            guess={this.state.guess}
+           />
         </div>
       )
   }

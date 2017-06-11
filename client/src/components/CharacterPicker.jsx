@@ -14,7 +14,7 @@ const CharacterPicker = function(props){
           <select onChange={props.onSelectedCharacterChange}>
             {options}
           </select>
-          <button onClick={props.onSubmitCharacterClick}>Choose</button>
+          <button onClick={props.onSubmitCharacterClick}>Guess</button>
       </section>
     )
   } else {

@@ -35,6 +35,11 @@ button {
     min-width: 40vw;
   }
 
+#play-again-button {
+  width: 30%;
+  margin: 0 35%;
+}
+
 .header {
   font-family: 'Bungee', cursive;
   text-align: center;

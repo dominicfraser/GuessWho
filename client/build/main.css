@@ -1,8 +1,8 @@
 body {
+  box-sizing: border-box;
   margin: 0;
   font-family: Montserrat;
   background: linear-gradient(yellow, yellow, red);
-  height: 100vh;
 }
 
 button {
@@ -18,7 +18,7 @@ button {
     font-size: 1em;
     text-shadow: 2px 0 0 black, -2px 0 0 black, 0 2px 0 black, 0 -2px 0 black, 1px 1px black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;
     border-radius: 8px;
-}
+  }
 
   button:hover {
     background-color: red;
@@ -47,12 +47,14 @@ button {
 
 .character-tiles-grid {
   display: grid;
+  justify-content: space-around;
   background: rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   grid-template-columns: 15vw 15vw 15vw 15vw 15vw 15vw;
   grid-template-rows: 21vw 21vw 21vw;
   grid-gap: 5px;
   margin: 0 2vw;
+  padding-bottom: 0.5em;
 }
 
 .question-button-grid {
@@ -64,6 +66,41 @@ button {
   margin: 0 10vw;
 }
 
-#question-picker-section, #character-picker-section {
-  /*text-align: center;*/
+#results-displayer {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.1);
+  padding: 0.2em;
+  margin: 1em auto;
+}
+
+#results-displayer h2, p {
+  margin-top: 1px;
+}
+
+@media screen and (min-width: 700px) {
+  .character-tiles-grid {
+    justify-content: space-around;
+    display: grid;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    grid-template-columns: 10vw 10vw 10vw 10vw 10vw 10vw;
+    grid-template-rows: 14vw 14vw 14vw;
+    grid-gap: 5px;
+    margin: 0 2vw;
+    padding-bottom: 0.5em;
+  }
+}
+
+@media screen and (min-width: 950px) {
+  .character-tiles-grid {
+    justify-content: space-around;
+    display: grid;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    grid-template-columns: 8vw 8vw 8vw 8vw 8vw 8vw;
+    grid-template-rows: 11.2vw 11.2vw 11.2vw;
+    grid-gap: 5px;
+    margin: 0 2vw;
+    padding-bottom: 0.5em;
+  }
 }

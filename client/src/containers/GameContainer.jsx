@@ -12,7 +12,7 @@ class GameContainer extends React.Component {
   constructor(props){
     super(props)
 
-    this.randomIndex = 0
+    this.randomIndex = 3
     this.seedCharacters = CharacterSeeds()
     this.seedQuestions = QuestionsSeeds()
 
@@ -100,14 +100,28 @@ console.log('disguardedChars', this.state.disguardedChars)
   }
 
   checkCharsAgainstQuestion(){
+//question values
     const checkParam = this.state.selectedQuestion.checkParam
     const valueToMatch = this.state.selectedQuestion.valueToMatch
-    
-    const newDisguardedChars = this.state.possibleChars.filter(c => c[checkParam] !== valueToMatch)
+//filter possible chars to find which match
+    let newDisguardedChars = []
+    if(this.state.correctChar[checkParam] === valueToMatch){
+      newDisguardedChars = this.state.possibleChars.filter(c => c[checkParam] !== valueToMatch)  
+    } else {
+      newDisguardedChars = this.state.possibleChars.filter(c => c[checkParam] === valueToMatch)
+    }
+//add newly disguarded to previously disguarded
     const disguardedChars = [...newDisguardedChars, ...this.state.disguardedChars]
     this.setState({disguardedChars: disguardedChars})
 
-    const newPossibleChars = this.state.possibleChars.filter(c => c[checkParam] === valueToMatch)
+//filter possible chars to remove those disguarded
+    let newPossibleChars = this.state.possibleChars
+    if(this.state.correctChar[checkParam] === valueToMatch){
+      newPossibleChars = this.state.possibleChars.filter(c => c[checkParam] === valueToMatch)
+    } else {
+      newPossibleChars = this.state.possibleChars.filter(c => c[checkParam] !== valueToMatch)
+    }
+
     this.setState({possibleChars: newPossibleChars})
     this.setState({selectedChar: newPossibleChars[0]})
   }

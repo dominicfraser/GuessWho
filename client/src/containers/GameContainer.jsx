@@ -67,17 +67,18 @@ console.log('disguardedChars', this.state.disguardedChars)
           </div>
           
           {result}
-
-          <QuestionPicker 
-            onSelectedQuestionChange={this.handleQuestionChange} 
-            onAskQuestionClick={this.onAskQuestionClick}
-            possibleQuestions={this.state.possibleQuestions}
-          />
-          <CharacterPicker
-            onSelectedCharacterChange={this.handleCharacterChange}
-            onSubmitCharacterClick={this.onSubmitCharacterClick}
-            possibleChars={this.state.possibleChars}
-          />
+          <div className='question-button-grid'>
+            <QuestionPicker 
+              onSelectedQuestionChange={this.handleQuestionChange} 
+              onAskQuestionClick={this.onAskQuestionClick}
+              possibleQuestions={this.state.possibleQuestions}
+            />
+            <CharacterPicker
+              onSelectedCharacterChange={this.handleCharacterChange}
+              onSubmitCharacterClick={this.onSubmitCharacterClick}
+              possibleChars={this.state.possibleChars}
+            />
+          </div>
         </div>
       )
   }

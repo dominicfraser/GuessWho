@@ -47,23 +47,19 @@ button {
 
 .character-tiles-grid {
   display: grid;
-  /*align-items: stretch;*/
   background: rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   grid-template-columns: 15vw 15vw 15vw 15vw 15vw 15vw;
   grid-template-rows: 21vw 21vw 21vw;
   grid-gap: 5px;
-  background-color: #fff;
   margin: 0 2vw;
 }
 
 .question-button-grid {
   display: grid;
   text-align: center;
-  /*align-items: stretch;*/
   background: rgba(0, 0, 0, 0);
   grid-template-columns: 40vw 40vw;
-  /*grid-template-rows: 15vw;*/
   grid-gap: 5px;
   margin: 0 10vw;
 }

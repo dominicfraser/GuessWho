@@ -1,6 +1,31 @@
 body {
   margin: 0;
+  font-family: Montserrat;
 }
+
+button {
+    font-family: 'Bungee', cursive;
+    background-color: yellow;
+    border: 3px solid red;
+    color: white;
+    text-transform: uppercase;
+    padding: 0.8em 1.8em;
+    margin: 1px 1px;
+    text-align: center;
+    display: inline-block;
+    font-size: 1em;
+    text-shadow: 2px 0 0 black, -2px 0 0 black, 0 2px 0 black, 0 -2px 0 black, 1px 1px black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;
+    border-radius: 8px;
+}
+
+  button:hover {
+    background-color: red;
+  }
+
+  button:active {
+    background-color: red;
+    transform: translateY(2px);
+  }
 
 .header {
   font-family: 'Bungee', cursive;
@@ -20,5 +45,9 @@ body {
   grid-gap: 5px;
   background-color: #fff;
   margin: 0 2vw;
+}
+
+  #question-picker-section, #character-picker-section {
+  text-align: center;
 }
 

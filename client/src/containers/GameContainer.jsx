@@ -49,7 +49,7 @@ console.log('render')
         ) 
     })
 //set up result based on if player has guessed
-    let result = <p>No result yet</p>
+    let result = <p></p>
     if (this.state.guess === "won"){
       result = <ResultDisplayer message="Correct! You Win!" turns={this.state.numberQsAsked}/>
     } 

@@ -6,6 +6,7 @@ class Character {
     this.skinColour = optionsHash.skinColour
     this.flight = optionsHash.flight
     this.planet = optionsHash.planet
+    this.mask = optionsHash.mask
   }
 }
 

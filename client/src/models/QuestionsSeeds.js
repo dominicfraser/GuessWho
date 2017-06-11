@@ -27,6 +27,12 @@ const QuestionsSeeds = function(){
     }),
 
     new Question({
+      title: "Do they wear a mask",
+      checkParam: "mask",
+      valueToMatch: "yes"
+    }),
+
+    new Question({
       title: "Can they fly",
       checkParam: "flight",
       valueToMatch: "yes"

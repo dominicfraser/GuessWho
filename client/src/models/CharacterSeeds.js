@@ -9,7 +9,8 @@ const CharacterSeeds = function(){
       skinColour: 'white',
       flight: "no",
       planet: "earth",
-      mask: "yes"
+      mask: "yes",
+      humanMutant: "no"
     }),
 
     new Character({
@@ -19,7 +20,8 @@ const CharacterSeeds = function(){
       skinColour: 'white',
       flight: "no",
       planet: "earth",
-      mask: "yes"
+      mask: "yes",
+      humanMutant: "no"
     }),
 
     new Character({
@@ -29,7 +31,8 @@ const CharacterSeeds = function(){
       skinColour: 'white',
       flight: "no",
       planet: "earth",
-      mask: "no"
+      mask: "no",
+      humanMutant: "yes"
     }),
 
     new Character({
@@ -39,7 +42,8 @@ const CharacterSeeds = function(){
       skinColour: 'white',
       flight: "no",
       planet: "earth",
-      mask: "no"
+      mask: "no",
+      humanMutant: "no"
     }),
 
     new Character({
@@ -49,7 +53,8 @@ const CharacterSeeds = function(){
       skinColour: 'white',
       flight: "no",
       planet: "earth",
-      mask: "yes"
+      mask: "yes",
+      humanMutant: "yes"
     }),
 
     new Character({
@@ -59,7 +64,8 @@ const CharacterSeeds = function(){
       skinColour: 'white',
       flight: "no",
       planet: "earth",
-      mask: "yes"
+      mask: "yes",
+      humanMutant: "no"
     }),
 
     new Character({
@@ -69,7 +75,8 @@ const CharacterSeeds = function(){
       skinColour: 'white',
       flight: "no",
       planet: "earth",
-      mask: "yes"
+      mask: "yes",
+      humanMutant: "yes"
     }),
 
     new Character({
@@ -79,7 +86,8 @@ const CharacterSeeds = function(){
       skinColour: 'white',
       flight: "no",
       planet: "earth",
-      mask: "yes"
+      mask: "yes",
+      humanMutant: "yes"
     }),
 
     new Character({
@@ -89,7 +97,8 @@ const CharacterSeeds = function(){
       skinColour: 'white',
       flight: "no",
       planet: "earth",
-      mask: "yes"
+      mask: "yes",
+      humanMutant: "no"
     }),
 
     new Character({
@@ -99,7 +108,8 @@ const CharacterSeeds = function(){
       skinColour: 'white',
       flight: "yes",
       planet: "earth",
-      mask: "yes"
+      mask: "yes",
+      humanMutant: "no"
     }),
 
     new Character({
@@ -109,7 +119,8 @@ const CharacterSeeds = function(){
       skinColour: 'green',
       flight: "no",
       planet: "earth",
-      mask: "no"
+      mask: "no",
+      humanMutant: "yes"
     }),
 
     new Character({
@@ -119,7 +130,8 @@ const CharacterSeeds = function(){
       skinColour: 'white',
       flight: "yes",
       planet: "earth",
-      mask: "yes"
+      mask: "yes",
+      humanMutant: "no"
     }),
 
     new Character({
@@ -129,7 +141,8 @@ const CharacterSeeds = function(){
       skinColour: 'white',
       flight: "no",
       planet: "earth",
-      mask: "yes"
+      mask: "yes",
+      humanMutant: "yes"
     }),
 
     new Character({
@@ -139,7 +152,8 @@ const CharacterSeeds = function(){
       skinColour: 'white',
       flight: "no",
       planet: "earth",
-      mask: "yes"
+      mask: "yes",
+      humanMutant: "no"
     }),
 
     new Character({
@@ -149,7 +163,8 @@ const CharacterSeeds = function(){
       skinColour: 'white',
       flight: "yes",
       planet: "not-earth",
-      mask: "no"
+      mask: "no",
+      humanMutant: "no"
     }),
 
     new Character({
@@ -159,7 +174,8 @@ const CharacterSeeds = function(){
       skinColour: 'white',
       flight: "no",
       planet: "not-earth",
-      mask: "no"
+      mask: "no",
+      humanMutant: "no"
     }),
 
     new Character({
@@ -169,7 +185,8 @@ const CharacterSeeds = function(){
       skinColour: 'white',
       flight: "no",
       planet: "earth",
-      mask: "no"
+      mask: "no",
+      humanMutant: "yes"
     }),
 
     new Character({
@@ -179,7 +196,8 @@ const CharacterSeeds = function(){
       skinColour: 'white',
       flight: "no",
       planet: "not-earth",
-      mask: "no"
+      mask: "no",
+      humanMutant: "no"
     })
   ]
 

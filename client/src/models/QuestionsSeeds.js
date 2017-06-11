@@ -33,6 +33,12 @@ const QuestionsSeeds = function(){
     }),
 
     new Question({
+      title: "Are they a human mutant",
+      checkParam: "humanMutant",
+      valueToMatch: "yes"
+    }),
+
+    new Question({
       title: "Can they fly",
       checkParam: "flight",
       valueToMatch: "yes"

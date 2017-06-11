@@ -7,6 +7,7 @@ class Character {
     this.flight = optionsHash.flight
     this.planet = optionsHash.planet
     this.mask = optionsHash.mask
+    this.humanMutant = optionsHash.humanMutant
   }
 }
 

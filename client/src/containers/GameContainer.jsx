@@ -159,7 +159,6 @@ console.log('render')
       numberQsAsked: 0,
       guess: "not yet guessed"
     })
-
   }
 
   randomIntBetween(min,max){

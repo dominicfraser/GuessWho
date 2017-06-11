@@ -1,6 +1,8 @@
 body {
   margin: 0;
   font-family: Montserrat;
+  background: linear-gradient(yellow, yellow, red);
+  height: 100vh;
 }
 
 button {
@@ -20,6 +22,7 @@ button {
 
   button:hover {
     background-color: red;
+    border: 3px solid yellow;
   }
 
   button:active {
@@ -34,6 +37,7 @@ button {
 .header {
   font-family: 'Bungee', cursive;
   text-align: center;
+  background: rgba(0, 0, 0, 0.1)
 }
 
 .character-tile {
@@ -43,7 +47,9 @@ button {
 
 .character-tiles-grid {
   display: grid;
-  align-items: stretch;
+  /*align-items: stretch;*/
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
   grid-template-columns: 15vw 15vw 15vw 15vw 15vw 15vw;
   grid-template-rows: 21vw 21vw 21vw;
   grid-gap: 5px;
@@ -54,11 +60,11 @@ button {
 .question-button-grid {
   display: grid;
   text-align: center;
-  align-items: stretch;
+  /*align-items: stretch;*/
+  background: rgba(0, 0, 0, 0);
   grid-template-columns: 40vw 40vw;
   /*grid-template-rows: 15vw;*/
   grid-gap: 5px;
-  background-color: #fff;
   margin: 0 10vw;
 }
 

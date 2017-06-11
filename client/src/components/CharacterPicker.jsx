@@ -8,14 +8,18 @@ const CharacterPicker = function(props){
       )
   })
 
-  return (
+  if(props.guess === "not yet guessed"){
+    return (
       <section id='character-picker-section'>
           <select onChange={props.onSelectedCharacterChange}>
             {options}
           </select>
           <button onClick={props.onSubmitCharacterClick}>Choose</button>
-        </section>
+      </section>
     )
+  } else {
+    return null
+  }
 }
 
 export default CharacterPicker

@@ -3,6 +3,7 @@ body {
   margin: 0;
   font-family: Montserrat;
   background: linear-gradient(yellow, yellow, red);
+  height: 100vh;
 }
 
 button {
@@ -57,7 +58,7 @@ button {
   padding-bottom: 0.5em;
 }
 
-.question-button-grid {
+#question-button-grid {
   display: grid;
   text-align: center;
   background: rgba(0, 0, 0, 0);

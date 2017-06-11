@@ -39,19 +39,18 @@ class GameContainer extends React.Component {
 
   render(){
 console.log('render')
-console.log('disguardedChars', this.state.disguardedChars)
+//set up character tiles 
     const tiles = this.seedCharacters.map((char, index) => {
       const srcPath = `./public/images/${char.linkName}.png`
       let opacity = 1
       if(this.state.disguardedChars.find(c => c.name === char.name) !== undefined){
         opacity = 0.3
       }
-
       return (
         <CharacterTile index={index} key={index} src={srcPath} opacity={opacity} />
         ) 
     })
-
+//set up result based on if player has guessed
     let result = <p>No result yet</p>
     if (this.state.guess === "won"){
       result = <ResultDisplayer message="Correct! You Win!" turns={this.state.numberQsAsked}/>
@@ -60,6 +59,7 @@ console.log('disguardedChars', this.state.disguardedChars)
       result = <ResultDisplayer message="Incorrect! You Loose!" turns={this.state.numberQsAsked}/>
     }
 
+//main return
     return (
         <div className='game-container'>
           <Header heading="Lego Heroes Guess Who" />
@@ -68,16 +68,18 @@ console.log('disguardedChars', this.state.disguardedChars)
           </div>
           
           {result}
-          <div className='question-button-grid'>
+          <div id='question-button-grid'>
             <QuestionPicker 
-              onSelectedQuestionChange={this.handleQuestionChange} 
+              onSelectedQuestionChange={this.handleQuestionChange}
               onAskQuestionClick={this.onAskQuestionClick}
               possibleQuestions={this.state.possibleQuestions}
+              guess={this.state.guess}
             />
             <CharacterPicker
               onSelectedCharacterChange={this.handleCharacterChange}
               onSubmitCharacterClick={this.onSubmitCharacterClick}
               possibleChars={this.state.possibleChars}
+              guess={this.state.guess}
             />
           </div>
         </div>
